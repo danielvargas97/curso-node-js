@@ -15,8 +15,8 @@ export class AppController {
     return this.appService.hola();
   }
 
-  @Get('para')
-  getParametro( @Param('palabra/:palabra') texto) : any{
+  @Get('para/:palabra')
+  getParametro( @Param('palabra') texto) : any{
       console.log(texto)
       return this.appService.holaParam(texto);
 
