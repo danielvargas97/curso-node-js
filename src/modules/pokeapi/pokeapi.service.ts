@@ -3,14 +3,17 @@ import {map} from 'rxjs/operators';
 
 @Injectable()
 export class PokeapiService {
+    private url : string = "https://pokeapi.co/api/v2"
+    
+    constructor( 
+        private readonly http : HttpService                
+    )
+    {}
 
-    constructor(
-        private http : HttpService
-    ){}
-
-    GetLista(){
-        return this.http.get("https://thesimpsonsquoteapi.glitch.me/quotes")
+    getPokemonList(numero : Number, offset? : Number){
+        return this.http.get(`${this.url}/pokemon?limit=${numero}&offset=${offset}`)
         .pipe( map( response => response.data))
     }
+
 
 }
