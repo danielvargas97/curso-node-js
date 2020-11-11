@@ -48,12 +48,12 @@ export class AppService {
     },
 
     {
-      Nombre : 'Elbisho',
+      Nombre : 'Patricio',
       Edad: 35
     },
 
     {
-      Nombre : 'El antibisho',
+      Nombre : 'Jorge',
       Edad: 33,
       Altura : 170
     }

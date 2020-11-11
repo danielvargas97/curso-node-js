@@ -1,5 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import {SimpsonapiService} from '../simpsonapi/simpsonapi.service';
+@ApiTags('Simpsons API')
 @Controller('simpsonapi')
 export class SimpsonapiController {
 
